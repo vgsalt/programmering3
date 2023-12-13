@@ -1,0 +1,5 @@
+click==8.1.7
+colorama==0.4.6
+numpy==1.26.2
+pilgram==1.2.1
+Pillow==10.1.0
