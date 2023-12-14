@@ -18,3 +18,9 @@ Aktiver venv (PowerShell)
 
 Last ned alle pakkene som kreves:
 ``pip install -r requirements.txt``
+
+## Hvordan bruke
+
+``python3 oppgave.py``
+
+Da får du vite hvordan man bruker appen.

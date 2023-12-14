@@ -49,11 +49,14 @@ def cropforinsta(image, type):
     """Beskjær bildet etter instagram sine krav"""
     with Image.open(image) as im:
         if type == "square":
-            im.resize((1080, 1080)).show()
+            im.thumbnail((500, 500), Image.LANCZOS)
+            im.show()
         elif type == "landscape":
-            im.resize((1080, 608)).show()
+            im.thumbnail((1080, 608), Image.LANCZOS)
+            im.show()
         elif type == "portrait":
-            im.resize((1080, 1350)).show()
+            im.thumbnail((1080, 1350), Image.LANCZOS)
+            im.show()
         elif type == "story":
             # Dette skal beholde bildeformatet
             # https://stackoverflow.com/a/4271003
