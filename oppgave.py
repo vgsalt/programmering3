@@ -21,7 +21,7 @@ def applyfilter(image, filter):
         elif filter == "rise":
             pilgram.rise(im).show()
         else:
-            print("Ingen filter angitt")
+            print("Ingen filter angitt / filteret er ikke i lista. Du kan velge mellom: brooklyn, contrast og rise.")
             im.show()
 
 @click.command()
@@ -70,8 +70,8 @@ def cropforinsta(image, type):
 def vintageify(image):
     """Få bildet til å se litt gammelt ut 😎🧓🏻"""
     with Image.open(image) as im:
-        # Willow ser litt vintage ut
-        im = pilgram.willow(im)
+        # 1977 ser litt vintage ut
+        im = pilgram._1977(im)
         im.thumbnail((500, 500), Image.LANCZOS)
         # topp, høyre, bunn og venstre
         border = (20, 20, 20, 120)
